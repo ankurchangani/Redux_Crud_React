@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import ViewData from "./components/ViewData/ViewData";
 import Update from "./components/Update/Update";
+import EmployeeView from "./components/EmployeeView/EmployeeView";
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
     <Route path="/employeedata" element={<Addform />} />
     <Route path="/view-data" element={<ViewData />} />
     <Route path="/Updatedata/:id" element={<Update />} />
+    <Route path="/employeeView/:id" element={<EmployeeView />} />
+   
 
     </Routes>
     </>

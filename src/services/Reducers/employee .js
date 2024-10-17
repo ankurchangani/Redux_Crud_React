@@ -1,8 +1,10 @@
 
 
+
 const initialState = {
     employees: JSON.parse(localStorage.getItem('emp')) || [],
     employee: null,
+    loading : false ,
 };
 
 const reducerEmployee = (state = initialState, action) => {
@@ -23,6 +25,12 @@ const reducerEmployee = (state = initialState, action) => {
             return {
                 ...state,
                 employees: updatedEmployees,
+            };
+
+            case 'loading':
+            return {
+                ...state,
+                loading: action.payload,
             };
 
         case 'delete_emp':

@@ -16,6 +16,10 @@ const Header = () => {
           <li>
             <Link to="/view-data" className="hover:underline">View Data</Link>
           </li>
+
+          <li>
+            <Link to="/employeeView/:id" className="hover:underline">EmployeeView</Link>
+          </li>
         </ul>
       </nav>
     </header>

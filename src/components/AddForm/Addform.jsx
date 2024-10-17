@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { employeedata } from '../../services/Action/Action';
+import { async } from '../../services/Action/Action';
 import { useNavigate } from 'react-router-dom';
 
 const EmployeeForm = () => {
@@ -27,10 +27,11 @@ const EmployeeForm = () => {
         e.preventDefault();
         console.log("Submitting form with data:", formInput);
 
-        dispatch(employeedata(formInput));
+       
+    dispatch(async(formInput));
 
         navigate('/view-data');
-        
+
         setFormInput({
             name: '',
             email: '',
@@ -116,3 +117,4 @@ const EmployeeForm = () => {
 };
 
 export default EmployeeForm;
+ 
